@@ -3,7 +3,16 @@ int main()
 {
     char *months[] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     int days_in_month[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    int i, j, total_days, week_day = 0, space_counter = 0;
+    int i, j, total_days, week_day = 0, space_counter = 0, year;
+    printf("Enter Your Year\n");
+    scanf("%d", &year);
+    printf("\n***************** Welcome To Year %d ***********************\n", year);
+
+    // check leap year
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+    {
+        days_in_month[1] = 29;
+    }
     for (i = 0; i < 12; i++)
     {
         printf("\n\n\n-----------------------%s ------------------------\n\n", months[i]);
