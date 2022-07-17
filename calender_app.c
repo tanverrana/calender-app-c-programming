@@ -5,7 +5,8 @@ int main()
     int i;
     for (i = 0; i < 12; i++)
     {
-        printf("\n-----------------%s --------------------\n", months[i]);
+        printf("\n-----------------------%s -------------------------\n", months[i]);
+        printf("\n    Sun    Mon    Tue    Wed   Thu    Fri    Sat\n\n");
     }
     return 0;
 }
