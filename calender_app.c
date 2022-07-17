@@ -1,4 +1,10 @@
 #include <stdio.h>
+
+int first_day_year(int year)
+{
+    int day = (year * 365 + ((year - 1) / 4) - ((year - 1) / 100) + ((year - 1) / 400)) % 7;
+    return day;
+}
 int main()
 {
     char *months[] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
@@ -13,6 +19,8 @@ int main()
     {
         days_in_month[1] = 29;
     }
+    //the first day of the year
+    week_day = first_day_year(year);
     for (i = 0; i < 12; i++)
     {
         printf("\n\n\n-----------------------%s ------------------------\n\n", months[i]);
